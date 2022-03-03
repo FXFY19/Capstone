@@ -1,0 +1,40 @@
+CREATE TABLE MTG_Card
+(
+  MTGCardName VARCHAR(255) NOT NULL,
+  MTGCardSet VARCHAR(255) NOT NULL,
+  Rarity VARCHAR(50) NOT NULL,
+  Legendary VARCHAR(50),
+  Cost VARCHAR(50) NOT NULL,
+  Total_Cost INT NOT NULL,
+  ColorID VARCHAR(255) NOT NULL,
+  Card_Type1 VARCHAR(255),
+  Card_Type2 VARCHAR(255),
+  PRIMARY KEY (MTGCardName, MTGCardSet)
+);
+
+CREATE TABLE CFV_Card
+(
+  CFVCardName VARCHAR(255) NOT NULL,
+  CFVCardSet VARCHAR(255) NOT NULL,
+  Rarity VARCHAR(50) NOT NULL,
+  Unit_Type VARCHAR(255) NOT NULL,
+  Clan_Nation VARCHAR(255) NOT NULL,
+  CFVTrigger VARCHAR(150),
+  Grade INT NOT NULL,
+  PRIMARY KEY (CFVCardName, CFVCardSet)
+);
+
+CREATE TABLE Card_Games
+(
+  Card_Game_Appr VARCHAR(50) NOT NULL,
+  CardGameName VARCHAR(255) NOT NULL,
+  PRIMARY KEY (Card_Game_Appr)
+);
+
+CREATE TABLE Collection
+(
+  Card_Name VARCHAR(255) NOT NULL,
+  Card_Game_Appr VARCHAR(50) NOT NULL,
+  PRIMARY KEY (Card_Game_Appr),
+  FOREIGN KEY (Card_Game_Appr) REFERENCES Card_Games(Card_Game_Appr)
+);
