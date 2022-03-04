@@ -24,7 +24,10 @@
 
     if($result_check > 0){
         while ($row = mysqli_fetch_assoc($result)){
-            echo $row['MTGCardName'] . "; " . $row['MTGCardSet'] . "; " . $row['Rarity']. "; " . $row['Legendary']  . "; " . $row['Cost'] . "; " . $row['Total_Cost'] . "; " . $row['ColorID'] . "; " . $row['Card_Type1'] . "; " . $row['Card_Type2'];
+            $carddisplay = $row['MTGCardName'] . "; " . $row['MTGCardSet'] . "; " . $row['Rarity']. "; " . $row['Legendary']  . "; " . $row['Cost'] . "; " . $row['Total_Cost'] . "; " . $row['ColorID'] . "; " . $row['Card_Type1'] . "; " . $row['Card_Type2'];
+            echo "<h3 class= collection_display>
+                $carddisplay
+                </h3>";
             echo "<br>";
         }
     }
