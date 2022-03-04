@@ -13,7 +13,7 @@
     </h1> 
     
     <h2 class = "upload-h2">
-        Select what Card you want to upload.
+        Select what Card you want to upload:
     </h2>
     </div>
     <section class = "boxlinks">
