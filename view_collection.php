@@ -7,8 +7,8 @@
         <h1>
             Card Collection
         </h1>
-        <h3>
-            Select a Collection to View.
+        <h3 class = "collection-h3">
+            Select a Collection to View:
         </h3>
     </div>
     <section class = "boxlinks">
