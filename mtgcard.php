@@ -100,5 +100,3 @@
 <?php
     require "footer.php";
 ?>
-        
-        
