@@ -1,4 +1,4 @@
-<?php
+?php
     class Card{
         private  $cardname;
         private  $cardrarity;
@@ -124,7 +124,7 @@
         }
         function setHasTriggers(){
             if($this -> getUnit() == "Trigger"){
-                 $this -> hasTriggers = true;
+                $this -> hasTriggers = true;
             }
             else{
                 $this -> hasTriggers = false;
