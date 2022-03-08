@@ -139,7 +139,7 @@ ul li{
 ul li a{
     display: block;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
     font-family: #1e1e1e;
     padding: 0 20px;
@@ -155,6 +155,7 @@ h1{
     border: 30px black;
     background-color: dimgray;
     font-size: 50px;
+    text-decoration: underline;
     margin: 10px auto 30px;
 }
 
