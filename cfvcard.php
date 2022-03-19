@@ -15,13 +15,29 @@
         </h2>
     </div>
 
-    <form action = 'cfvcardd.php' method = 'get'> 
-    MTG Card Name: <input type = 'text' name = 'CFV Card Name'>
+    <form action = 'includes/cfvupload.inc.php' method = 'POST'> 
+    CFV Card Name: <input type = 'text' name = 'CFV_Card_Name'>
     <br>
-    MTG Card Rarity: <input type = 'text' name = 'CFV Card Rarity'>
+    CFV Card Rarity: <input type = 'text' name = 'CFV_Card_Rarity'>
     <br>
-    MTG Card Set: <input type = 'text' name = 'CFV Card Set'> 
+    CFV Card Set: <input type = 'text' name = 'CFV_Card_Set'> 
     <br>
+    CFV Unit Type: <input list = 'Unit' name = 'Unit_Type'>
+    <datalist id = 'Unit'>
+        <option value = 'Normal'>
+        <option value = 'Trigger'>
+        <option value = 'Order'>
+    </datalist>
+    <br>
+    If CFV Card is a Trigger Unit: What Trigger? <input type = 'text' name = 'CFV_trigger'>
+    <br>
+    CFV Card Nation or Clan: <input type = 'text' name = 'CFV_Nation_Clan'>
+    <br>
+    CFV Card Grade: <input type = 'text' name = 'CFV_grade'>
+    <br>
+    <input type = 'submit' name = 'Submit' value = 'Submit'>
+    </form>
+
 
 
 
