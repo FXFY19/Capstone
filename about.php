@@ -24,6 +24,10 @@
             Cardfight Vanguard (CFV)
             <br>
             Magic the Gathering (MTG)
+            <br>
+            Pokemon TCG (PKM)
+            <br>
+            Yugioh (YGO)
         </p>
     </div>
 
@@ -32,4 +36,3 @@
 <?php
     require "footer.php";
 ?>
-
