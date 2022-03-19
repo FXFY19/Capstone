@@ -23,9 +23,21 @@
             </div>
         </a>
         
-        <a href= "#">
+        <a href= "cfvcard.php">
             <div class = "cfv-boxlink">
                 <h3>Cardfight Vanguard (CFV)</h3>
+            </div>
+        </a>
+
+        <a href = "pkmcard.php">
+            <div class = "pkm-boxlink">
+                <h3>Pokemon TCG (PKM)</h3>
+            </div>
+        </a>
+
+        <a href = "#">
+            <div class = "ygo-boxlink">
+                <h3>Yugioh (YGO)</h3>
             </div>
         </a>
     </section> 
