@@ -1,4 +1,4 @@
-?php
+<?php
     class Card{
         private  $cardname;
         private  $cardrarity;
@@ -193,5 +193,53 @@
             }
                     
         }
+    }
+
+    class PKM extends Card{
+        private $EnergyType;
+        private $PKMCardtype;
+        private $HPValue;
+        private $TrainerType;
+        private $Foil;
+        private $FoilType;
+
+        function setEnergy($newEnergy){
+            $this -> EnergyType = $newEnergy;
+        }
+        function setPKMCardtype($newPKMCardtype){
+            $this -> PKMCardtype = $newPKMCardtype;
+        }
+        function setHP ($newHP){
+            $this -> HPValue = $newHP;
+        }
+        function setTrainer($newTrainer){
+            $this -> TrainerType = $newTrainer;
+        }
+        function setFoil($newFoil){
+            $this -> Foil = $newFoil;
+        }
+        function setFoilType($newFoilType){
+            $this -> FoilType = $newFoilType;
+        }
+
+        function getEnergy(){
+            return $this ->EnergyType;
+        }
+        function getPKMCardType(){
+            return $this -> PKMCardtype;
+        }
+        function getHP(){
+            return $this -> HPValue;
+        }
+        function getTrainer(){
+            return $this -> TrainerType;
+        }
+        function getFoil(){
+            return $this -> Foil;
+        }
+        function getFoilType(){
+            return $this -> FoilType;
+        }
+
     }
 ?>
