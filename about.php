@@ -29,6 +29,12 @@
             <br>
             Yugioh (YGO)
         </p>
+
+        <br>
+
+        <?php
+            print_r($_SESSION['Master_list']);
+        ?>
     </div>
 
 </main>
