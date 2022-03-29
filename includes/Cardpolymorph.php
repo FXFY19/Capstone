@@ -29,8 +29,12 @@
         function getCardset(){
             return $this -> cardset;
         }
-        public function toString(){
+        function __toString(){
             return "Name: " + $this-> getCardname() + "\n" + "Rarity: " + $this -> getCardrarity() + "\n" + "Set: " + $this -> getCardset();  
+        }
+
+        function add_to_list($data_array,$card_to_add){
+            array_push($data_array,$card_to_add);
         }
     }
     /*Polymorphism in PHP */
@@ -286,5 +290,118 @@
             echo "<br>";
         }
 
+    }
+
+    class YGO extends Card{
+        private $YGOattribute;
+        private $YGOCardtype;
+        private $YGOSubtype1;
+        private $YGOPenType2;
+        private $YGORankStar;
+        private $YGOAtk;
+        private $YGODefLink;
+
+        function __construct($cardname, $cardrarity, $cardset, $YGOattribute, $YGOCardtype,$YGOSubtype1, $YGOPenType2, $YGORankStar,$YGOAtk,$YGODefLink)
+        {
+            $this -> cardname = $cardname;
+            $this -> cardrarity = $cardrarity;
+            $this -> cardset = $cardset;
+            $this -> YGOattribute = $YGOattribute;
+            $this -> YGOCardtype = $YGOCardtype;
+            $this -> YGOSubtype1 = $YGOSubtype1;
+            $this -> YGOPenType2 = $YGOPenType2;
+            $this -> YGORankStar = $YGORankStar;
+            $this -> YGOAtk = $YGOAtk;
+            $this -> YGODefLink = $YGODefLink;
+        }
+
+        function setAttribute($newAttribute){
+            $this -> YGOattribute = $newAttribute;
+        }
+
+        function setCardtype($newCardtype){
+            $this -> YGOCardtype = $newCardtype;
+        }
+
+        function setSub1($newSub1){
+            $this -> YGOSubtype1 = $newSub1;
+        }
+
+        function setPenSub2($newSub2){
+            $this -> YGOPenType2 = $newSub2;
+        }
+
+        function setRankStar($newRankStar){
+            $this -> YGORankStar = $newRankStar;
+        }
+
+        function setAtk($newAtk){
+            $this -> YGOAtk = $newAtk;
+        }
+
+        function setDefLink($newDefLink){
+            $this -> YGODefLink = $newDefLink;
+        }
+
+        function getAttribute(){
+            return $this -> YGOattribute;
+        }
+
+        function getCardType(){
+            return $this -> YGOCardtype;
+        }
+
+        function getSub1(){
+            return $this -> YGOSubtype1;
+        }
+
+        function getPenSub(){
+            return $this -> YGOPenType2;
+        }
+
+        function getRankStar(){
+            return $this -> YGORankStar;
+        }
+
+        function getAttack(){
+            return $this -> YGOAtk;
+        }
+        function getDefLink(){
+            return $this -> YGODefLink;
+        }
+
+        function __toString()
+        {
+            echo "YGO Card Name: ";
+            echo $this -> getCardname();
+            echo "<br>";
+            echo "YGO Card Rarity: ";
+            echo $this -> getCardrarity();
+            echo "<br>";
+            echo "YGO Card Set: ";
+            echo $this -> getCardset();
+            echo "<br>";
+            echo "YGO Attribute: ";
+            echo $this -> getAttribute();
+            echo "<br>";
+            echo "YGO Card Type: ";
+            echo $this -> getCardType();
+            echo "<br>";
+            echo "YGO Card Sub Type: ";
+            echo $this -> getSub1();
+            echo "<br>";
+            echo "If the card is a Pendulum, what other Subtype is it? ";
+            echo $this -> getPenSub();
+            echo "<br>";
+            echo "Star/Rank of the Card: ";
+            echo $this -> getRankStar(); 
+            echo "<br>";
+            echo "YGO Monster Card Attack: ";
+            echo $this -> getAttack();
+            echo "<br>";
+            echo "YGO Monster Card Defense/Link: ";
+            echo $this -> getDefLink();
+            echo "<br>";
+        }
     }
 ?>
