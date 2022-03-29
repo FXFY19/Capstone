@@ -28,12 +28,27 @@
     <input type = 'radio' id = 'Trainer' name = 'PKM_Cardtype' value = 'Trainer'>
     <label for = 'Trainer'> Trainer </label> 
     <br>
-    If PKM Card is a Pokemon Card, what is the Pokemon Energy Type? (Put None if not applicable) <input type = 'text' name = 'PKM_Energy_Type'>
+    If PKM Card is a Pokemon Card, what is the Pokemon Energy Type? (Put None if not applicable) <input list = 'Energy_list' name = 'PKM_Energy_Type'>
+    <datalist id = 'Energy_list'>
+        <option value = 'None'>
+        <option value = 'Grass'>
+        <option value = 'Fire'>
+        <option value = 'Water'>
+        <option value = 'Lightning'>
+        <option value = 'Fighting'>
+        <option value = 'Psychic'>
+        <option value = 'Colorless'>
+        <option value = 'Darkness'>
+        <option value = 'Metal'>
+        <option value = 'Dragon'>
+        <option value = 'Fairy'>
+    </datalist>
     <br>
     If PKM Card is a Pokemon Card, what is it HP Value? (Put None if not applicable) <input type = 'text' name = 'PKM_HP'>
     <br>
     If PKM Card is a Trainer Card, What is the Card's Subtype? (Put None if not applicable) <input list = 'Trainer_list_type' name = 'PKM_Trainer_type'>
-    <datalist list = 'Trainer_list_type'>
+    <datalist id = 'Trainer_list_type'>
+        <option value = 'None'>
         <option value = 'Item'>
         <option value = 'Supporter'>
         <option value = 'Stadium'>
