@@ -32,39 +32,48 @@
     <br>
     MTG Card Total Cost to Cast: <input type = 'text' name = 'MTG_total'> 
     <br>
-    MTG Card Color Idenity: <input list = 'Color Idenity' name = 'Colorid'> 
-    <datalist id = 'Color Idenity'>
-        <option value = 'Red (R)'>
-        <option value = 'Green (G)'>
-        <option value = 'Blue (U)'>
-        <option value = 'White (W)'>
-        <option value = 'Black (B)'>
-        <option value = 'Azorius (WU)'>
-        <option value = 'Dimir (UB)'>
-        <option value = 'Rakdos (BR)'>
-        <option value = 'Gruul (RG)'>
-        <option value = 'Selesyna (GW)'>
-        <option value = 'Orzhov (WB)'>
-        <option value = 'Izzet (UR)'>
-        <option value = 'Golgari (BG)'>
-        <option value = 'Boros (RW)'>
-        <option value = 'Simic (GU)'>
-        <option value = 'Esper (WUB)'>
-        <option value = 'Grixis (UBR)'>
-        <option value = 'Jund (BRG)'>
-        <option value = 'Naya (RGW)'>
-        <option value = 'Bant (GWU)'>
-        <option value = 'Abzan (WBG)'>
-        <option value = 'Jeskai (URW)'>
-        <option value = 'Sultai (BGU)'>
-        <option value = 'Mardu (RWB)'>
-        <option value = 'Temur (UGR)'>
-        <option value = 'Yore-Tiller (WUBR)'>
-        <option value = 'Glint-Eye (UBRG)'>
-        <option value = 'Dune-Brood (BRGW)'>
-        <option value = 'Ink-Treader (RGWU)'>
-        <option value = 'Witch-Maw (GWUB)'>
-        <option value = '5-Color (WBURG)'>
+    MTG Card Color Idenity: <input list = 'Color_idenity' name = 'Colorid'>
+    <datalist id = 'Color_idenity'>
+        <optgroup label = 'Single Color'>
+            <option value = 'Colorless'> </option>
+            <option value = 'Red (R)'> </option>
+            <option value = 'Green (G)'> </option>
+            <option value = 'Blue (U)'> </option>
+            <option value = 'White (W)'> </option>
+            <option value = 'Black (B)'></option>
+        </optgroup>
+        <optgroup label = 'Duel Color'>
+            <option value = 'Azorius (WU)'> </option>
+            <option value = 'Dimir (UB)'> </option>
+            <option value = 'Rakdos (BR)'> </option>
+            <option value = 'Gruul (RG)'> </option>
+            <option value = 'Selesyna (GW)'> </option>
+            <option value = 'Orzhov (WB)'> </option>
+            <option value = 'Izzet (UR)'> </option>
+            <option value = 'Golgari (BG)'> </option>
+            <option value = 'Boros (RW)'> </option>
+            <option value = 'Simic (GU)'> </option>
+        </optgroup>
+        <optgroup label = 'Tri-Color'>
+            <option value = 'Esper (WUB)'> </option> 
+            <option value = 'Grixis (UBR)'> </option>
+            <option value = 'Jund (BRG)'> </option>
+            <option value = 'Naya (RGW)'> </option>
+            <option value = 'Bant (GWU)'> </option>
+            <option value = 'Abzan (WBG)'> </option>
+            <option value = 'Jeskai (URW)'> </option>
+            <option value = 'Sultai (BGU)'> </option>
+            <option value = 'Mardu (RWB)'> </option>
+            <option value = 'Temur (UGR)'> </option>
+        </optgroup>
+            <optgroup label = 'Four-Color and Five'>
+            <option value = 'Yore-Tiller (WUBR)'>
+            <option value = 'Glint-Eye (UBRG)'>
+            <option value = 'Dune-Brood (BRGW)'>
+            <option value = 'Ink-Treader (RGWU)'>
+            <option value = 'Witch-Maw (GWUB)'>
+            <option value = '5-Color (WBURG)'>
+        </optgroup>
     </datalist>
     <br>
     MTG Card Type?
@@ -100,3 +109,5 @@
 <?php
     require "footer.php";
 ?>
+        
+        
