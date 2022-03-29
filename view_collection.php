@@ -29,13 +29,13 @@
             </div>
         </a>
 
-        <a href = "#">
+        <a href = "pkmcollection.php">
             <div class = "pkm-boxlink">
                 <h3>Pokemon TCG (PKM) Collection</h3>
             </div>
         </a>
 
-        <a href = "#">
+        <a href = "ygocollection.php">
             <div class = "ygo-boxlink">
                 <h3>Yugioh (YGO) Collection</h3>
             </div>
