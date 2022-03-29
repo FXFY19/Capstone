@@ -35,7 +35,7 @@
             </div>
         </a>
 
-        <a href = "#">
+        <a href = "ygocard.php">
             <div class = "ygo-boxlink">
                 <h3>Yugioh (YGO)</h3>
             </div>
