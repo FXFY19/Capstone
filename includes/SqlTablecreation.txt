@@ -1,5 +1,3 @@
-
-Generate SQL
 CREATE TABLE MTG_Card
 (
   MTGCardName VARCHAR(255) NOT NULL,
@@ -26,11 +24,13 @@ CREATE TABLE CFV_Card
   PRIMARY KEY (CFVCardName, CFVCardSet)
 );
 
-CREATE TABLE Card_Games
+CREATE TABLE Collection
 (
-  Card_Game_Appr VARCHAR(50) NOT NULL,
-  CardGameName VARCHAR(255) NOT NULL,
-  PRIMARY KEY (Card_Game_Appr)
+  Card_Name VARCHAR(255) NOT NULL,
+  Card_Game_Set VARCHAR(255) NOT NULL,
+  Card_Rarity CHAR(255) NOT NULL,
+  Card_Game VARCHAR(255) NOT NULL,
+  PRIMARY KEY (Card_Name, Card_Game_Set)
 );
 
 CREATE TABLE PKM_Card
@@ -60,13 +60,4 @@ CREATE TABLE YGO_Card
   YGOAtk INT,
   YGODefLink INT,
   PRIMARY KEY (YGOName, YGOSet)
-);
-
-CREATE TABLE Collection
-(
-  Card_Name VARCHAR(255) NOT NULL,
-  Card_Game_Set VARCHAR(255) NOT NULL,
-  Card_Game_Appr VARCHAR(50) NOT NULL,
-  PRIMARY KEY (Card_Game_Appr),
-  FOREIGN KEY (Card_Game_Appr) REFERENCES Card_Games(Card_Game_Appr)
 );
