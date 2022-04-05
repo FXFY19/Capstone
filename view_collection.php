@@ -12,7 +12,7 @@
         </h3>
     </div>
     <section class = "boxlinks">
-        <a href= "#">
+        <a href= "all_collection.php">
             <div class = "allcards-boxlink">
                 <h3>All Cards</h3>
             </div>
