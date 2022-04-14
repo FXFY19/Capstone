@@ -1,14 +1,17 @@
 <?php
+
      class Card{
         private  $cardname;
         private  $cardrarity;
         private  $cardset;
+        private  $cardgame;
 
-        function __construct($cardname, $cardrarity, $cardset)
+        function __construct($cardname, $cardrarity, $cardset, $cardgame)
         {
             $this -> cardname = $cardname;
             $this -> cardrarity = $cardrarity;
             $this -> cardset = $cardset;
+            $this -> cardgame = $cardgame;
         }
 
         function setCardname($newcardname){
@@ -20,6 +23,9 @@
         function setCardset($newcardset){
             $this -> cardset = $newcardset;
         }
+        function setGame($newGame){
+            $this -> cardgame = $newGame;
+        }
         function getCardname(){
             return $this -> cardname;
         }
@@ -29,13 +35,16 @@
         function getCardset(){
             return $this -> cardset;
         }
-        function __toString(){
-            return "Name: " + $this-> getCardname() + "\n" + "Rarity: " + $this -> getCardrarity() + "\n" + "Set: " + $this -> getCardset();  
+        function getGame(){
+            return $this -> cardgame;
         }
+        // function __toString(){
+        //     return "Game: $this -> cardgame \n Name: $this-> cardname \n Rarity: $this -> cardrarity \n Set: $this -> cardset \n";
+        // }
 
-        function add_to_list($data_array,$card_to_add){
-            array_push($data_array,$card_to_add);
-        }
+        // function add_to_list($data_array,$card_to_add){
+        //     array_push($data_array,$card_to_add);
+        // }
     }
     /*Polymorphism in PHP */
     class MTG extends Card{
@@ -57,6 +66,17 @@
             $this -> cast = $cast;
             $this -> total = $total;
             $this -> colorid = $colorid;
+        }
+
+        function setCardname($newcardname){
+            $this -> cardname = $newcardname;
+        }
+
+        function setCardrarity($newcardrarity){
+            $this -> cardrarity = $newcardrarity;
+        }
+        function setCardset($newcardset){
+            $this -> cardset = $newcardset;
         }
 
         function setCardType($newcardtype1){
@@ -84,6 +104,17 @@
             $this -> colorid = $newcolorid;
         }
 
+        function getCardname(){
+            return $this -> cardname;
+        }
+
+        function getCardrarity(){
+            return $this -> cardrarity;
+        }
+        function getCardset(){
+            return $this -> cardset;
+        }
+
         function getCardType1(){
             return $this -> type_1;
         }
@@ -104,34 +135,10 @@
              return $this -> colorid;
         }
 
-        public function toString(){
-            echo "MTG Card Name: ";
-            echo $this -> getCardname();
-            echo "<br>";
-            echo "MTG Card Rarity: ";
-            echo $this -> getCardrarity();
-            echo "<br>";
-            echo "MTG Card Set: ";
-            echo $this -> getCardset();
-            echo "<br>";
-            echo "MTG Card Type: ";
-            echo $this -> getCardType1();
-            echo " and ";
-            echo $this -> getCardType2();
-            echo "<br>";
-            echo "Legendary: ";
-            echo $this -> getLegend();
-            echo "<br>";
-            echo "MTG Card Casting Cost: ";
-            echo $this -> getCast();
-            echo "<br>";
-            echo "MTG Card Total Cost: ";
-            echo $this ->gettotal();
-            echo "<br>";
-            echo "MTG Card Color Idenity: ";
-            echo $this -> getcolorid();
-            echo "<br>";
-        }
+        // function __toString(){
+        //     return "MTG Card Name: $this -> getCardname()";
+        //     // return "MTG Card Name: $this -> cardname \n MTG Card Rarity: $this -> cardrarity \n MTG Card Set: $this -> cardset \n MTG Card Type: $this -> type_1 and $this -> type_2 \n Legendary: $this -> legend \n MTG Card Casting Cost: $this -> cast \n MTG Card Total Cost: $this -> total \n MTG Card Color Idenity: $this -> colorid \n";
+        // }
     }
     class CFV extends Card{
         private $clanNation;
@@ -148,6 +155,17 @@
             $this -> unit = $unit;
             $this -> grade = $grade;
             $this -> triggers = $triggers;
+        }
+
+        function setCardname($newcardname){
+            $this -> cardname = $newcardname;
+        }
+
+        function setCardrarity($newcardrarity){
+            $this -> cardrarity = $newcardrarity;
+        }
+        function setCardset($newcardset){
+            $this -> cardset = $newcardset;
         }
 
 
@@ -167,6 +185,17 @@
             $this -> triggers = $newTrigger;
         }
 
+        function getCardname(){
+            return $this -> cardname;
+        }
+
+        function getCardrarity(){
+            return $this -> cardrarity;
+        }
+        function getCardset(){
+            return $this -> cardset;
+        }
+
         function getClanNation(){
             return $this -> clanNation;
         }
@@ -177,30 +206,30 @@
             return $this -> triggers;
         }
 
-        function toString(){
-                echo "CFV Card Name: ";
-                echo $this -> getCardname();
-                echo "<br>";
-                echo "CFV Card Rarity: ";
-                echo $this -> getCardrarity();
-                echo "<br>";
-                echo "CFV Card Set: ";
-                echo $this -> getCardset();
-                echo "<br>";
-                echo "CFV Card Grade: ";
-                echo $this ->getGrade();
-                echo "<br>";
-                echo "CFV Card Unit: ";
-                echo $this -> getUnit();
-                echo "<br>";
-                echo "Trigger: ";
-                echo $this -> getTrigger();
-                echo "<br>";
-                echo "CFV Card Clan/Nation: ";
-                echo $this -> getClanNation();
-                echo "<br>";
+        // function __toString(){
+        //         echo "CFV Card Name: ";
+        //         echo $this -> getCardname();
+        //         echo "<br>";
+        //         echo "CFV Card Rarity: ";
+        //         echo $this -> getCardrarity();
+        //         echo "<br>";
+        //         echo "CFV Card Set: ";
+        //         echo $this -> getCardset();
+        //         echo "<br>";
+        //         echo "CFV Card Grade: ";
+        //         echo $this ->getGrade();
+        //         echo "<br>";
+        //         echo "CFV Card Unit: ";
+        //         echo $this -> getUnit();
+        //         echo "<br>";
+        //         echo "Trigger: ";
+        //         echo $this -> getTrigger();
+        //         echo "<br>";
+        //         echo "CFV Card Clan/Nation: ";
+        //         echo $this -> getClanNation();
+        //         echo "<br>";
     
-        }
+        //}
     }
 
     class PKM extends Card{
@@ -224,6 +253,18 @@
             $this -> FoilType = $FoilType;
         }
 
+        function setCardname($newcardname){
+            $this -> cardname = $newcardname;
+        }
+
+        function setCardrarity($newcardrarity){
+            $this -> cardrarity = $newcardrarity;
+        }
+        function setCardset($newcardset){
+            $this -> cardset = $newcardset;
+        }
+
+
         function setEnergy($newEnergy){
             $this -> EnergyType = $newEnergy;
         }
@@ -241,6 +282,17 @@
         }
         function setFoilType($newFoilType){
             $this -> FoilType = $newFoilType;
+        }
+
+        function getCardname(){
+            return $this -> cardname;
+        }
+
+        function getCardrarity(){
+            return $this -> cardrarity;
+        }
+        function getCardset(){
+            return $this -> cardset;
         }
 
         function getEnergy(){
@@ -262,33 +314,33 @@
             return $this -> FoilType;
         }
 
-        public function toString()
-        {
-            echo "PKM Card Name: ";
-            echo $this -> getCardname();
-            echo "<br>";
-            echo "PKM Card Rarity: ";
-            echo $this -> getCardrarity();
-            echo "<br>";
-            echo "PKM Card Set: ";
-            echo $this -> getCardset();
-            echo "<br>";
-            echo "PKM Energy Type: ";
-            echo $this -> getEnergy();
-            echo "<br>";
-            echo "PKM Card Type: ";
-            echo $this -> getPKMCardType();
-            echo "<br>";
-            echo "PKM Trainer Type: ";
-            echo $this -> getTrainer();
-            echo "<br>";
-            echo "Is it Foiled? ";
-            echo $this -> getFoil();
-            echo "<br>";
-            echo "What Type of Foil? ";
-            echo $this -> getFoilType(); 
-            echo "<br>";
-        }
+        // function __toString()
+        // {
+        //     echo "PKM Card Name: ";
+        //     echo $this -> getCardname();
+        //     echo "<br>";
+        //     echo "PKM Card Rarity: ";
+        //     echo $this -> getCardrarity();
+        //     echo "<br>";
+        //     echo "PKM Card Set: ";
+        //     echo $this -> getCardset();
+        //     echo "<br>";
+        //     echo "PKM Energy Type: ";
+        //     echo $this -> getEnergy();
+        //     echo "<br>";
+        //     echo "PKM Card Type: ";
+        //     echo $this -> getPKMCardType();
+        //     echo "<br>";
+        //     echo "PKM Trainer Type: ";
+        //     echo $this -> getTrainer();
+        //     echo "<br>";
+        //     echo "Is it Foiled? ";
+        //     echo $this -> getFoil();
+        //     echo "<br>";
+        //     echo "What Type of Foil? ";
+        //     echo $this -> getFoilType(); 
+        //     echo "<br>";
+        // }
 
     }
 
@@ -313,6 +365,17 @@
             $this -> YGORankStar = $YGORankStar;
             $this -> YGOAtk = $YGOAtk;
             $this -> YGODefLink = $YGODefLink;
+        }
+
+        function setCardname($newcardname){
+            $this -> cardname = $newcardname;
+        }
+
+        function setCardrarity($newcardrarity){
+            $this -> cardrarity = $newcardrarity;
+        }
+        function setCardset($newcardset){
+            $this -> cardset = $newcardset;
         }
 
         function setAttribute($newAttribute){
@@ -343,6 +406,17 @@
             $this -> YGODefLink = $newDefLink;
         }
 
+        function getCardname(){
+            return $this -> cardname;
+        }
+
+        function getCardrarity(){
+            return $this -> cardrarity;
+        }
+        function getCardset(){
+            return $this -> cardset;
+        }
+
         function getAttribute(){
             return $this -> YGOattribute;
         }
@@ -370,38 +444,74 @@
             return $this -> YGODefLink;
         }
 
-        function __toString()
+        // function __toString()
+        // {
+        //     echo "YGO Card Name: ";
+        //     echo $this -> getCardname();
+        //     echo "<br>";
+        //     echo "YGO Card Rarity: ";
+        //     echo $this -> getCardrarity();
+        //     echo "<br>";
+        //     echo "YGO Card Set: ";
+        //     echo $this -> getCardset();
+        //     echo "<br>";
+        //     echo "YGO Attribute: ";
+        //     echo $this -> getAttribute();
+        //     echo "<br>";
+        //     echo "YGO Card Type: ";
+        //     echo $this -> getCardType();
+        //     echo "<br>";
+        //     echo "YGO Card Sub Type: ";
+        //     echo $this -> getSub1();
+        //     echo "<br>";
+        //     echo "If the card is a Pendulum, what other Subtype is it? ";
+        //     echo $this -> getPenSub();
+        //     echo "<br>";
+        //     echo "Star/Rank of the Card: ";
+        //     echo $this -> getRankStar(); 
+        //     echo "<br>";
+        //     echo "YGO Monster Card Attack: ";
+        //     echo $this -> getAttack();
+        //     echo "<br>";
+        //     echo "YGO Monster Card Defense/Link: ";
+        //     echo $this -> getDefLink();
+        //     echo "<br>";
+        // }
+    }
+
+
+?>
+
+<?php
+    
+
+    class Deck{
+        private $name_deck;
+
+        function __construct($name_deck)
         {
-            echo "YGO Card Name: ";
-            echo $this -> getCardname();
-            echo "<br>";
-            echo "YGO Card Rarity: ";
-            echo $this -> getCardrarity();
-            echo "<br>";
-            echo "YGO Card Set: ";
-            echo $this -> getCardset();
-            echo "<br>";
-            echo "YGO Attribute: ";
-            echo $this -> getAttribute();
-            echo "<br>";
-            echo "YGO Card Type: ";
-            echo $this -> getCardType();
-            echo "<br>";
-            echo "YGO Card Sub Type: ";
-            echo $this -> getSub1();
-            echo "<br>";
-            echo "If the card is a Pendulum, what other Subtype is it? ";
-            echo $this -> getPenSub();
-            echo "<br>";
-            echo "Star/Rank of the Card: ";
-            echo $this -> getRankStar(); 
-            echo "<br>";
-            echo "YGO Monster Card Attack: ";
-            echo $this -> getAttack();
-            echo "<br>";
-            echo "YGO Monster Card Defense/Link: ";
-            echo $this -> getDefLink();
-            echo "<br>";
+            include_once 'dbh_inc.php';
+            $this -> name_deck = $name_deck;
+            $sql = "CREATE TABLE DECK (
+                Card_Name VARCHAR(255) NOT NULL,
+                Card_Game_Set VARCHAR(255) NOT NULL,
+                Card_Rarity CHAR(255) NOT NULL,
+                Card_Game VARCHAR(255) NOT NULL,
+                PRIMARY KEY (Card_Name, Card_Game_Set)
+              );";
+            mysqli_query($conn,$sql); 
+        }
+
+        function add_to_list(Card $card_insert){
+            array_push($list_for_deck, $card_insert);
+        }
+
+        function set_deck_name($name_change_deck){
+            $this -> name_deck = $name_change_deck;
+        }
+        function get_deck_name(){
+            return $this -> name_deck;
         }
     }
+
 ?>
