@@ -14,11 +14,27 @@
             Pokemon TCG Card Selected.
         </h2>
     </div>
+    <br>
+    <br>
+    <div class = "image1">
+        <img src = "imgs/ReadPKM.jpg" alt = "How to read PKM Card">
+    </div>
+    <br>
+    <div class = "image1">
+        <img src = "imgs/ReadPKMFoil.jpg" alt = "How to read PKM Card Foil">
+    </div>
+    <br>
 
+    <h3 class = collection_display>
     <form action = 'includes/pkmupload.inc.php' method = 'POST'> 
     PKM Card Name: <input type = 'text' name = 'PKM_Card_Name'>
     <br>
-    PKM Card Rarity: <input type = 'text' name = 'PKM_Card_Rarity'>
+    PKM Card Rarity: <input list = 'Rarity_list' name = 'PKM_Card_Rarity'>
+    <datalist id = 'Rarity_list'>
+        <option value = 'Star (Rare)'>
+        <option value = 'Diamond (Uncommon)'>
+        <option value = 'Circle (Commmon)'>
+    </datalist>
     <br>
     PKM Card Set: <input type = 'text' name = 'PKM_Card_Set'> 
     <br>
@@ -74,6 +90,10 @@
     <br>
     <input type = 'submit' name = 'Submit' value = 'Submit'>
     </form>
+</h3>
+<br>
+<br>
+<br>
 
 
 
