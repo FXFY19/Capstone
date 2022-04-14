@@ -15,6 +15,15 @@
         </h2>
     </div>
 
+    <br>
+    <br>
+    <div class = "image1">
+    <img src = "imgs/ReadCFV.jpg" alt = "How to read CFV Card">
+    </div>
+    <br>
+
+    <h3 class = collection_display>
+
     <form action = 'includes/cfvupload.inc.php' method = 'POST'> 
     CFV Card Name: <input type = 'text' name = 'CFV_Card_Name'>
     <br>
@@ -37,7 +46,10 @@
     <br>
     <input type = 'submit' name = 'Submit' value = 'Submit'>
     </form>
-
+</h3>
+<br>
+<br>
+<br>
 
 
 
