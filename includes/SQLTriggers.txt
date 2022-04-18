@@ -1,0 +1,39 @@
+delimiter $$
+
+CREATE TRIGGER `after_cfv_insert_all`
+AFTER INSERT ON `cfv_card`
+FOR EACH ROW
+BEGIN
+INSERT INTO collection(Card_Name, Card_Game_Set, Card_Rarity, Card_Game) VALUES (new.CFVCardName, new.CFVCardSet, new.Rarity, 'CFV');
+end $$
+delimiter ;
+
+delimiter $$
+CREATE TRIGGER `after_mtg_insert_all`
+AFTER INSERT ON `mtg_card`
+FOR EACH ROW
+BEGIN
+INSERT INTO collection(Card_Name, Card_Game_Set, Card_Rarity, Card_Game) VALUES (new.MTGCardName, new.MTGCardSet, new.Rarity, 'MTG');
+end $$
+delimiter ;
+
+
+delimiter $$
+
+CREATE TRIGGER `after_pkm_insert_all`
+AFTER INSERT ON `pkm_card`
+FOR EACH ROW
+BEGIN
+INSERT INTO collection(Card_Name, Card_Game_Set, Card_Rarity, Card_Game) VALUES (new.PKMName, new.PKMSet, new.PKMRarity, 'PKM');
+end $$
+delimiter ;
+
+delimiter $$
+
+CREATE TRIGGER `after_ygo_insert_all`
+AFTER INSERT ON `ygo_card`
+FOR EACH ROW
+BEGIN
+INSERT INTO collection(Card_Name, Card_Game_Set, Card_Rarity, Card_Game) VALUES (new.YGOName, new.YGOSet, new.YGORarity, 'YGO');
+end $$
+delimiter ;
