@@ -32,9 +32,15 @@
 
         <br>
 
-        <?php
-            print_r($_SESSION['Master_list']);
-        ?>
+        <p class = about-p2>
+            Why did I created a Website to store Trading Cards?
+            Answer: Because I have tried to sort and catalog my own trading card collection via boxes and binders and the system was tiresome and long. I have tried using 
+            a system of Google Forms and Spreadsheets, but it was too time consuming. So, for my capstone, I created Card Binder, a website that I can just input the cards' traits
+            into a form and able to sort and delete cards.
+            Using a Card Polymorphism, all the cards traits are easily catagoized and easy to figure out which card is from what Game.
+        </p>
+
+
     </div>
 
 </main>
