@@ -60,7 +60,7 @@
         <option value = 'Fairy'>
     </datalist>
     <br>
-    If PKM Card is a Pokemon Card, what is it HP Value? (Put None if not applicable) <input type = 'text' name = 'PKM_HP'>
+    If PKM Card is a Pokemon Card, what is it HP Value? (Put 0 if not applicable) <input type = 'text' name = 'PKM_HP'>
     <br>
     If PKM Card is a Trainer Card, What is the Card's Subtype? (Put None if not applicable) <input list = 'Trainer_list_type' name = 'PKM_Trainer_type'>
     <datalist id = 'Trainer_list_type'>
@@ -78,6 +78,7 @@
     <br>
     If Yes, What is the Foiling Type? <input list = 'Foiling_type' name = 'PKM_Foiling'>
     <datalist id = 'Foiling_type'>
+        <option value = 'None'>
         <option value = 'Foil'>
         <option value = 'Reverse Foil'>
         <option value = 'V or GX'>
