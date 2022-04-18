@@ -1,0 +1,1 @@
+This folder is used to hold any file that is not part of the program proper. All program in this folder was used to test certain functions
