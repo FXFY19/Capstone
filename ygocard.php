@@ -14,7 +14,34 @@
             Yu-Gi-Oh Card Selected.
         </h2>
     </div>
+    <br>
+    <br>
 
+    <div class = "image1">
+        <img src = "imgs/ReadYGO.jpg" alt = "How to read YGO Card">
+    </div>
+    <br>
+    <div class = "image1">
+        <img src = "imgs/ReadYGOMonster.jpg" alt = "How to read YGO Card">
+    </div>
+    <br>
+    <div class = "image1">
+        <img src = "imgs/ReadYGOSpellsTraps.jpg" alt = "How to read YGO Card">
+    </div>
+    <br>
+    <div>
+        <h3 class = collection_display>
+        For understanding Yugioh Card Rarity, Visit this website:
+        <a href="https://www.yugiohcardguide.com/guide_to_card_rarity.html">Yugioh Card Rarity</a>
+
+        </h3>
+    </div>
+
+    <br>
+    <br>
+
+
+    <h3 class = collection_display>
     <form action = 'includes/ygoupload.inc.php' method = 'POST'> 
     YGO Card Name: <input type = 'text' name = 'YGO_Card_Name'>
     <br>
@@ -93,6 +120,10 @@
     <br>
     <input type = 'submit' name = 'Submit' value = 'Submit'>
     </form>
+</h3>
+<br>
+<br>
+<br>
 
 
 
