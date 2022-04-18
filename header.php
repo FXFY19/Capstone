@@ -9,7 +9,7 @@
     <head>
         <meta charset = "UTF-8"> 
         <title>
-            Card Collection Capstone!
+            Card Binder Capstone!
         </title>
         <meta name = "viewport" content="width=device-width, intial-scale = 1.0">        
         <link rel = "stylesheet" href="style/style.css">
