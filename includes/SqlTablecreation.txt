@@ -1,3 +1,5 @@
+CREATE SCHEMA `capstone` ;
+
 CREATE TABLE MTG_Card
 (
   MTGCardName VARCHAR(255) NOT NULL,
